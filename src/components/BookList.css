@@ -1,5 +1,14 @@
 .bookList {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   justify-content: space-between;
   margin: 32px 0px;
+}
+
+@media (max-width: 640px) {
+  .bookList {
+    justify-content: center;
+    gap: 32px;
+  }
 }

@@ -9,7 +9,7 @@ const Book = ({ books }) => {
       {books.map((book) => (
         <div className="book" key={book.id}>
           <h3>{book.title}</h3>
-          <p>{book.author}</p>
+          <span>{book.author}</span>
           <img src={book.imageURL} alt={"Book image" + book.id} />
           <p>{book.description}</p>
         </div>

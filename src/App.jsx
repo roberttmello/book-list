@@ -1,5 +1,3 @@
-// import Greeting from "./components/Greeting";
-
 import "./App.css";
 import BookList from "./components/BookList";
 

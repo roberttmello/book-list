@@ -1,8 +1,15 @@
 .container {
   margin: 0px auto;
   max-width: 960px;
+  padding: 16px;
 }
 
 .container h1 {
   margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .container h1 {
+    text-align: center;
+  }
 }
