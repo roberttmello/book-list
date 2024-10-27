@@ -2,32 +2,25 @@ import "./Book.css";
 
 import PropTypes from "prop-types";
 
-const Book = ({ books }) => {
-  
+const Book = ({ id, title, author, imageURL, description }) => {
   return (
     <>
-      {books.map((book) => (
-        <div className="book" key={book.id}>
-          <h3>{book.title}</h3>
-          <span>{book.author}</span>
-          <img src={book.imageURL} alt={"Book image" + book.id} />
-          <p>{book.description}</p>
-        </div>
-      ))}
+      <div className="book">
+        <h3>{title}</h3>
+        <span>{author}</span>
+        <img src={imageURL} alt={"Book image" + id} />
+        <p>{description}</p>
+      </div>
     </>
   );
 };
 
 Book.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      imageURL: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  imageURL: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default Book;

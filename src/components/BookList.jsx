@@ -6,7 +6,9 @@ import { books } from "../data/books";
 const BookList = () => {
   return (
     <section className="bookList">
-        <Book books={books} />
+      {books.map((book) => {
+        return <Book {...book} key={book.id} />;
+      })}
     </section>
   );
 };
